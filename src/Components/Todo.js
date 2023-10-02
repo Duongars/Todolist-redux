@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import './Todo.css';
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 
-const Todo = ({ id, task, completed, toggleTodo, removeTodo,update }) => {
+const Todo = ({ todo, toggleTodo, removeTodo,update }) => {
+ const   { id, task, completed} = todo
     const [isEditing, setisEditing] = useState(false);
     const [updatedTask, setupdatedTask] = useState(task);
     const handleUpdate =(e) =>{
